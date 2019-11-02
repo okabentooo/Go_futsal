@@ -16,7 +16,7 @@
                             <th scope="col">Nama</th>
                             <th scope="col">Nomor ID</th>
                             <th scope="col">Jam</th>
-                            <th scope="col">Aksi</th>
+                            <th scope="col">Acc</th>
                         </tr>
                     </thead>
                         <tbody>
