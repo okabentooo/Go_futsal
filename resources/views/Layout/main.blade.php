@@ -13,6 +13,23 @@
     <body>
 
 
+        <div class="flex-center position-ref full-height">
+            @if (Route::has('login'))
+                <div class="top-right links">
+                    @auth
+                        <a href="{{ url('/home') }}">Home</a>
+                    @else
+                        <a href="{{ route('login') }}">Login</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">Register</a>
+                        @endif
+                    @endauth
+                </div>
+            @endif
+        </div>
+
+
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
@@ -25,6 +42,8 @@
                     <a class="nav-item nav-link active" href="{{ url ('/') }}">Home</a>
                     <a class="nav-item nav-link" href="{{ url ('/about') }}">About</a>
                     <a class="nav-item nav-link" href="{{ url ('/booking') }}">Booking</a>
+                    <a class="nav-item nav-link" href="{{ url ('/orders') }}">Orderan</a>
+                    <a class="nav-item nav-link" href="{{ url ('/add') }}">Tambah Lapangan</a>
                 </div>
             </div>
         </div>

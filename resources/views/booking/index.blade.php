@@ -16,20 +16,24 @@
                             <th scope="col">Nama</th>
                             <th scope="col">Nomor ID</th>
                             <th scope="col">Jam</th>
-                            <th scope="col">Acc</th>
+                            <th scope="col">IdLap</th>
+                            <th scope="col">Aksi</th>
                         </tr>
                     </thead>
                         <tbody>
+                            @foreach( $booking as $book )
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Melsen</td>
-                                <td>1831046</td>
-                                <td>8:00</td>
+                                <th scope="row">{{$loop->iteration}}</th>
+                                <td>{{ $book->nama}}</td>
+                                <td>{{$book->notelp}}</td>
+                                <td>{{$book->email}}</td>
+                                <td>{{$book->idlapangan}}</td>
                                 <td>
                                     <a href="" class="badge badge-success">Yes</a>
                                     <a href="" class="badge badge-danger">Not</a>
                                 </td>
-                            </tr>                    
+                            </tr> 
+                            @endforeach                   
                         </tbody>
                 </table>
             </div>
